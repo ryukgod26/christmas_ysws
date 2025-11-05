@@ -54,9 +54,9 @@ color: rgba(255,255,255,0.9);
 }
 
 @keyframes floatHeading {
-0% { transform: translateY(0) rotate(-0.2deg); }
-50% { transform: translateY(-8px) rotate(0.5deg); }
-100% { transform: translateY(0) rotate(-0.2deg); }
+0% {transform: translateY(0) rotate(-0.2deg);}
+50% {transform: translateY(-8px) rotate(0.5deg);}
+100% {transform: translateY(0) rotate(-0.2deg);}
 }
 
 .snow {
@@ -78,21 +78,21 @@ animation-iteration-count: infinite, infinite, infinite;
 }
 
 @keyframes fall {
-0%   { transform: translateY(-20vh) translateX(0) rotate(0deg); }
-100% { transform: translateY(120vh) translateX(60px) rotate(360deg); }
+0%   {transform: translateY(-20vh) translateX(0) rotate(0deg);}
+100% {transform: translateY(120vh) translateX(60px) rotate(360deg);}
 }
 
 @keyframes sway {
-0% { margin-left: 0px; }
-50% { margin-left: 60px; }
-100% { margin-left: 0px; }
+0% {margin-left: 0px;}
+50% {margin-left: 60px;}
+100% {margin-left: 0px;}
 }
 
 @keyframes fade {
-0% { opacity: 0; transform: translateY(-4vh) scale(0.7); }
-15% { opacity: 0.95; transform: translateY(0) scale(1); }
-85% { opacity: 0.95; }
-100% { opacity: 0; transform: translateY(100vh) scale(0.9); }
+0% {opacity: 0; transform: translateY(-4vh) scale(0.7);}
+15% {opacity: 0.95; transform: translateY(0) scale(1);}
+85% {opacity: 0.95;}
+100% {opacity: 0; transform: translateY(100vh) scale(0.9);}
 }
 
 .glow {
@@ -128,7 +128,7 @@ z-index: 1;
     line-height: 1.1;
 }
 }
-/* Festive button */
+
 .xmas-btn {
     margin-top: 1.6rem;
     padding: 1rem 2.4rem;
@@ -151,7 +151,7 @@ z-index: 1;
     outline-offset: 4px;
 }
 
-/* decorative string lights (pseudo element) */
+
 .xmas-btn::before {
     content: '';
     position: absolute;
@@ -161,10 +161,10 @@ z-index: 1;
     height: 120%;
     pointer-events: none;
     background: radial-gradient(circle at 10% 20%, #ff4d4d 6px, transparent 7px),
-                            radial-gradient(circle at 28% 34%, #ffd700 6px, transparent 7px),
-                            radial-gradient(circle at 46% 18%, #4dff4d 6px, transparent 7px),
-                            radial-gradient(circle at 64% 34%, #4dd0ff 6px, transparent 7px),
-                            radial-gradient(circle at 82% 20%, #ff8bd6 6px, transparent 7px);
+                radial-gradient(circle at 28% 34%, #ffd700 6px, transparent 7px),
+                radial-gradient(circle at 46% 18%, #4dff4d 6px, transparent 7px),
+                radial-gradient(circle at 64% 34%, #4dd0ff 6px, transparent 7px),
+                radial-gradient(circle at 82% 20%, #ff8bd6 6px, transparent 7px);
     mix-blend-mode: screen;
     opacity: 0;
     transition: opacity 220ms ease;
@@ -199,15 +199,15 @@ z-index: 1;
 }
 
 @keyframes twinkle-btn {
-    0% { transform: translateY(-10px) scale(1) rotate(0deg); opacity: 1; }
-    50% { transform: translateY(-14px) scale(1.08) rotate(8deg); opacity: 0.85; }
-    100% { transform: translateY(-10px) scale(1) rotate(0deg); opacity: 1; }
+    0% {transform: translateY(-10px) scale(1) rotate(0deg);opacity: 1;}
+    50% {transform: translateY(-14px) scale(1.08) rotate(8deg);opacity: 0.85;}
+    100% {transform: translateY(-10px) scale(1) rotate(0deg);opacity: 1;}
 }
 
 @media (max-width: 600px) {
     .xmas-btn { font-size: 0.95rem; padding: 0.65rem 1.2rem; }
 }
-/* FAQ Section */
+
 .faq-section {
 background: linear-gradient(180deg, #0f2b47 0%, #071423 100%);
 color: #fff;
@@ -265,6 +265,6 @@ animation: fadeIn 0.3s ease;
 }
 
 @keyframes fadeIn {
-from { opacity: 0; transform: translateY(-5px); }
-to   { opacity: 1; transform: translateY(0); }
+from {opacity: 0; transform: translateY(-5px);}
+to   {opacity: 1; transform: translateY(0);}
 }

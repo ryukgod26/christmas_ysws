@@ -1,0 +1,270 @@
+
+:root {
+--bg-1: #071423;
+--bg-2: #0f2b47;
+--accent-1: #ffef9f;
+--accent-2: #ffd1c2;
+--text-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+html, body {
+    margin: 0;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.02), transparent 10%),
+                linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    font-family: "Inter", system-ui, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+
+.stage {
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;   
+align-items: center;       
+height: 100vh;
+padding: 0 1rem;
+text-align: center;
+box-sizing: border-box;
+}
+
+.headline {
+z-index: 5;
+max-width: 90vw;
+}
+
+.headline h1 {
+margin: 0;
+font-family: "Great Vibes", cursive;
+font-size: clamp(3rem, 10vw, 7rem);
+background: linear-gradient(90deg, #fff 0%, #ffd1c2 30%, #ffb3b3 60%, #fff 100%);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+text-shadow: var(--text-shadow);
+animation: floatHeading 6s ease-in-out infinite;
+}
+
+.headline p {
+margin-top: 0.6rem;
+font-weight: 300;
+font-size: clamp(1rem, 2.4vw, 1.3rem);
+color: rgba(255,255,255,0.9);
+}
+
+@keyframes floatHeading {
+0% { transform: translateY(0) rotate(-0.2deg); }
+50% { transform: translateY(-8px) rotate(0.5deg); }
+100% { transform: translateY(0) rotate(-0.2deg); }
+}
+
+.snow {
+position: absolute;
+inset: 0;
+pointer-events: none;
+overflow: hidden;
+z-index: 2;
+}
+
+.flake {
+position: absolute;
+top: -10%;
+font-size: 14px;
+opacity: 0.95;
+animation-name: fall, sway, fade;
+animation-timing-function: linear, ease-in-out, linear;
+animation-iteration-count: infinite, infinite, infinite;
+}
+
+@keyframes fall {
+0%   { transform: translateY(-20vh) translateX(0) rotate(0deg); }
+100% { transform: translateY(120vh) translateX(60px) rotate(360deg); }
+}
+
+@keyframes sway {
+0% { margin-left: 0px; }
+50% { margin-left: 60px; }
+100% { margin-left: 0px; }
+}
+
+@keyframes fade {
+0% { opacity: 0; transform: translateY(-4vh) scale(0.7); }
+15% { opacity: 0.95; transform: translateY(0) scale(1); }
+85% { opacity: 0.95; }
+100% { opacity: 0; transform: translateY(100vh) scale(0.9); }
+}
+
+.glow {
+position: absolute;
+inset: 0;
+z-index: 3;
+pointer-events: none;
+background: radial-gradient(400px 160px at 50% 35%, rgba(255,200,170,0.06), transparent 10%),
+            radial-gradient(600px 200px at 50% 65%, rgba(255,120,120,0.03), transparent 12%);
+mix-blend-mode: screen;
+}
+
+.star {
+position: absolute;
+width: 3px;
+height: 3px;
+border-radius: 50%;
+background: rgba(255,255,255,0.9);
+box-shadow: 0 0 8px rgba(255,255,255,0.08);
+animation: twinkle 3s infinite;
+z-index: 1;
+}
+
+@keyframes twinkle {
+0% { opacity: 0.1; transform: scale(0.8); }
+50% { opacity: 1; transform: scale(1.2); }
+100% { opacity: 0.1; transform: scale(0.8); }
+}
+
+@media (max-width: 600px) {
+.headline h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+}
+/* Festive button */
+.xmas-btn {
+    margin-top: 1.6rem;
+    padding: 1rem 2.4rem;
+    font-size: 1.60rem;
+    font-weight: 700;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff;
+    background: linear-gradient(90deg, #b71c1c 0%, #e91e63 45%, #2e7d32 100%);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.45), 0 0 6px rgba(255,240,200,0.06) inset;
+    cursor: pointer;
+    transition: transform 240ms cubic-bezier(.2,.9,.2,1), box-shadow 240ms, filter 240ms;
+    position: relative;
+    overflow: visible;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.xmas-btn:focus {
+    outline: 3px solid rgba(255,215,0,0.14);
+    outline-offset: 4px;
+}
+
+/* decorative string lights (pseudo element) */
+.xmas-btn::before {
+    content: '';
+    position: absolute;
+    left: -12%;
+    top: -40%;
+    width: 124%;
+    height: 120%;
+    pointer-events: none;
+    background: radial-gradient(circle at 10% 20%, #ff4d4d 6px, transparent 7px),
+                            radial-gradient(circle at 28% 34%, #ffd700 6px, transparent 7px),
+                            radial-gradient(circle at 46% 18%, #4dff4d 6px, transparent 7px),
+                            radial-gradient(circle at 64% 34%, #4dd0ff 6px, transparent 7px),
+                            radial-gradient(circle at 82% 20%, #ff8bd6 6px, transparent 7px);
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 220ms ease;
+}
+
+.xmas-btn::after {
+    content: '❄';
+    position: absolute;
+    right: 12px;
+    top: -6px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(6px) scale(0.9) rotate(-6deg);
+    transition: all 320ms cubic-bezier(.2,.9,.2,1);
+    text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+.xmas-btn:hover {
+    transform: translateY(-6px) rotate(-1deg) scale(1.02);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.6), 0 0 44px rgba(255,200,120,0.28);
+    filter: saturate(1.06) brightness(1.03);
+}
+
+.xmas-btn:hover::before {
+    opacity: 1;
+}
+
+.xmas-btn:hover::after {
+    opacity: 1;
+    transform: translateY(-16px) scale(1.06) rotate(6deg);
+    animation: twinkle-btn 900ms ease-in-out infinite;
+}
+
+@keyframes twinkle-btn {
+    0% { transform: translateY(-10px) scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: translateY(-14px) scale(1.08) rotate(8deg); opacity: 0.85; }
+    100% { transform: translateY(-10px) scale(1) rotate(0deg); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .xmas-btn { font-size: 0.95rem; padding: 0.65rem 1.2rem; }
+}
+/* FAQ Section */
+.faq-section {
+background: linear-gradient(180deg, #0f2b47 0%, #071423 100%);
+color: #fff;
+padding: 4rem 1.5rem;
+text-align: center;
+}
+
+.faq-section h2 {
+font-family: "Great Vibes", cursive;
+font-size: clamp(2.2rem, 6vw, 3rem);
+color: #ffd1c2;
+margin-bottom: 2rem;
+text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+.faq {
+max-width: 700px;
+margin: 0 auto;
+text-align: left;
+}
+
+.faq details {
+background: rgba(255,255,255,0.05);
+border-radius: 12px;
+margin-bottom: 1rem;
+padding: 1rem 1.2rem;
+cursor: pointer;
+transition: all 0.3s ease;
+border: 1px solid rgba(255,255,255,0.08);
+}
+
+.faq summary {
+font-size: 1.1rem;
+font-weight: 600;
+color: #ffefcf;
+outline: none;
+list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+display: none;
+}
+
+.faq details[open] {
+background: rgba(255,255,255,0.1);
+border-color: rgba(255,255,255,0.2);
+}
+
+.faq details p {
+margin-top: 0.5rem;
+color: rgba(255,255,255,0.9);
+line-height: 1.5;
+font-size: 0.95rem;
+animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(-5px); }
+to   { opacity: 1; transform: translateY(0); }
+}

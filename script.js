@@ -63,8 +63,7 @@
     const musicBtn = document.getElementById('musicToggle');
     let audio = null;
     let isPlaying = false;
-    const musicUrl = './song.mp3';
-    
+    const musicUrl = 'https://raw.githubusercontent.com/ryukgod26/christmas_ysws/main/christmas-holiday-festive-cheer-snow-427231.mp3';
     musicBtn.addEventListener('click', function() {
         if (!audio) {
             audio = new Audio(musicUrl);

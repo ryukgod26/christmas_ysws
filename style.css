@@ -1,4 +1,3 @@
-
 :root {
 --bg-1: #071423;
 --bg-2: #0f2b47;
@@ -6,7 +5,6 @@
 --accent-2: #ffd1c2;
 --text-shadow: 0 6px 20px rgba(0,0,0,0.6);
 }
-
 html, body {
     margin: 0;
     background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.02), transparent 10%),
@@ -15,8 +13,6 @@ html, body {
     color: #fff;
     overflow-x: hidden;
 }
-
-
 .stage {
 position: relative;
 display: flex;
@@ -28,12 +24,10 @@ padding: 0 1rem;
 text-align: center;
 box-sizing: border-box;
 }
-
 .headline {
 z-index: 5;
 max-width: 90vw;
 }
-
 .headline h1 {
 margin: 0;
 font-family: "Great Vibes", cursive;
@@ -45,20 +39,17 @@ color: transparent;
 text-shadow: var(--text-shadow);
 animation: floatHeading 6s ease-in-out infinite;
 }
-
 .headline p {
 margin-top: 0.6rem;
 font-weight: 300;
 font-size: clamp(1rem, 2.4vw, 1.3rem);
 color: rgba(255,255,255,0.9);
 }
-
 @keyframes floatHeading {
 0% {transform: translateY(0) rotate(-0.2deg);}
 50% {transform: translateY(-8px) rotate(0.5deg);}
 100% {transform: translateY(0) rotate(-0.2deg);}
 }
-
 .snow {
 position: absolute;
 inset: 0;
@@ -66,7 +57,6 @@ pointer-events: none;
 overflow: hidden;
 z-index: 2;
 }
-
 .flake {
 position: absolute;
 top: -10%;
@@ -76,25 +66,21 @@ animation-name: fall, sway, fade;
 animation-timing-function: linear, ease-in-out, linear;
 animation-iteration-count: infinite, infinite, infinite;
 }
-
 @keyframes fall {
 0%   {transform: translateY(-20vh) translateX(0) rotate(0deg);}
 100% {transform: translateY(120vh) translateX(60px) rotate(360deg);}
 }
-
 @keyframes sway {
 0% {margin-left: 0px;}
 50% {margin-left: 60px;}
 100% {margin-left: 0px;}
 }
-
 @keyframes fade {
 0% {opacity: 0; transform: translateY(-4vh) scale(0.7);}
 15% {opacity: 0.95; transform: translateY(0) scale(1);}
 85% {opacity: 0.95;}
 100% {opacity: 0; transform: translateY(100vh) scale(0.9);}
 }
-
 .glow {
 position: absolute;
 inset: 0;
@@ -104,7 +90,6 @@ background: radial-gradient(400px 160px at 50% 35%, rgba(255,200,170,0.06), tran
             radial-gradient(600px 200px at 50% 65%, rgba(255,120,120,0.03), transparent 12%);
 mix-blend-mode: screen;
 }
-
 .star {
 position: absolute;
 width: 3px;
@@ -115,20 +100,11 @@ box-shadow: 0 0 8px rgba(255,255,255,0.08);
 animation: twinkle 3s infinite;
 z-index: 1;
 }
-
 @keyframes twinkle {
 0% { opacity: 0.1; transform: scale(0.8); }
 50% { opacity: 1; transform: scale(1.2); }
 100% { opacity: 0.1; transform: scale(0.8); }
 }
-
-@media (max-width: 600px) {
-.headline h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-}
-}
-
 .xmas-btn {
     margin-top: 1.6rem;
     padding: 1rem 2.4rem;
@@ -145,13 +121,10 @@ z-index: 1;
     overflow: visible;
     -webkit-tap-highlight-color: transparent;
 }
-
 .xmas-btn:focus {
     outline: 3px solid rgba(255,215,0,0.14);
     outline-offset: 4px;
 }
-
-
 .xmas-btn::before {
     content: '';
     position: absolute;
@@ -169,7 +142,6 @@ z-index: 1;
     opacity: 0;
     transition: opacity 220ms ease;
 }
-
 .xmas-btn::after {
     content: '❄';
     position: absolute;
@@ -181,40 +153,30 @@ z-index: 1;
     transition: all 320ms cubic-bezier(.2,.9,.2,1);
     text-shadow: 0 6px 18px rgba(0,0,0,0.45);
 }
-
 .xmas-btn:hover {
     transform: translateY(-6px) rotate(-1deg) scale(1.02);
     box-shadow: 0 18px 36px rgba(0,0,0,0.6), 0 0 44px rgba(255,200,120,0.28);
     filter: saturate(1.06) brightness(1.03);
 }
-
 .xmas-btn:hover::before {
     opacity: 1;
 }
-
 .xmas-btn:hover::after {
     opacity: 1;
     transform: translateY(-16px) scale(1.06) rotate(6deg);
     animation: twinkle-btn 900ms ease-in-out infinite;
 }
-
 @keyframes twinkle-btn {
     0% {transform: translateY(-10px) scale(1) rotate(0deg);opacity: 1;}
     50% {transform: translateY(-14px) scale(1.08) rotate(8deg);opacity: 0.85;}
     100% {transform: translateY(-10px) scale(1) rotate(0deg);opacity: 1;}
 }
-
-@media (max-width: 600px) {
-    .xmas-btn { font-size: 0.95rem; padding: 0.65rem 1.2rem; }
-}
-
 .faq-section {
 background: linear-gradient(180deg, #0f2b47 0%, #071423 100%);
 color: #fff;
 padding: 4rem 1.5rem;
 text-align: center;
 }
-
 .faq-section h2 {
 font-family: "Great Vibes", cursive;
 font-size: clamp(2.2rem, 6vw, 3rem);
@@ -222,13 +184,11 @@ color: #ffd1c2;
 margin-bottom: 2rem;
 text-shadow: 0 3px 10px rgba(0,0,0,0.5);
 }
-
 .faq {
 max-width: 700px;
 margin: 0 auto;
 text-align: left;
 }
-
 .faq details {
 background: rgba(255,255,255,0.05);
 border-radius: 12px;
@@ -238,7 +198,6 @@ cursor: pointer;
 transition: all 0.3s ease;
 border: 1px solid rgba(255,255,255,0.08);
 }
-
 .faq summary {
 font-size: 1.1rem;
 font-weight: 600;
@@ -267,4 +226,532 @@ animation: fadeIn 0.3s ease;
 @keyframes fadeIn {
 from {opacity: 0; transform: translateY(-5px);}
 to   {opacity: 1; transform: translateY(0);}
+}
+.countdown {
+display: flex;
+gap: 1.5rem;
+justify-content: center;
+margin-top: 2rem;
+flex-wrap: wrap;
+}
+.countdown-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+background: rgba(255,255,255,0.08);
+padding: 1rem 1.5rem;
+border-radius: 12px;
+border: 1px solid rgba(255,255,255,0.15);
+backdrop-filter: blur(10px);
+min-width: 80px;
+}
+.countdown-value {
+font-size: 2.5rem;
+font-weight: 700;
+background: linear-gradient(90deg, #fff 0%, #ffd1c2 50%, #fff 100%);
+-webkit-background-clip: text;
+background-clip: text;
+color: transparent;
+line-height: 1;
+text-shadow: 0 3px 12px rgba(0,0,0,0.4);
+}
+
+.countdown-label {
+font-size: 0.75rem;
+color: rgba(255,255,255,0.7);
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-top: 0.5rem;
+}
+.music-player {
+position: fixed;
+bottom: 2rem;
+right: 2rem;
+z-index: 100;
+}
+
+.music-btn {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+border: 2px solid rgba(255,255,255,0.2);
+background: linear-gradient(135deg, #b71c1c 0%, #e91e63 100%);
+box-shadow: 0 8px 20px rgba(0,0,0,0.4), 0 0 30px rgba(255,100,100,0.3);
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 300ms cubic-bezier(.2,.9,.2,1);
+position: relative;
+}
+
+.music-btn:hover {
+transform: scale(1.1) rotate(5deg);
+box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 50px rgba(255,100,100,0.5);
+}
+
+.music-btn.playing {
+animation: pulse 1.5s ease-in-out infinite;
+}
+
+.music-icon {
+font-size: 1.8rem;
+animation: musicNote 2s ease-in-out infinite;
+}
+
+.music-btn.playing .music-icon {
+animation: musicNote 0.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+0%, 100% { transform: scale(1); }
+50% { transform: scale(1.05); box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 60px rgba(255,100,100,0.6); }
+}
+
+@keyframes musicNote {
+0%, 100% { transform: translateY(0) rotate(0deg); }
+25% { transform: translateY(-3px) rotate(-5deg); }
+75% { transform: translateY(-3px) rotate(5deg); }
+}
+.xmas-tree {
+position: fixed;
+bottom: 2rem;
+left: 2rem;
+z-index: 10;
+display: flex;
+flex-direction: column;
+align-items: center;
+filter: drop-shadow(0 8px 20px rgba(0,0,0,0.4));
+}
+.tree-top {
+font-size: 2rem;
+animation: twinkleStar 2s ease-in-out infinite;
+margin-bottom: -8px;
+z-index: 2;
+}
+.tree-tier {
+font-size: 3rem;
+line-height: 0.7;
+margin: -4px 0;
+position: relative;
+}
+.tree-tier-1 { font-size: 2.2rem; }
+.tree-tier-2 { font-size: 2.8rem; }
+.tree-tier-3 { font-size: 3.4rem; }
+
+.tree-trunk {
+width: 20px;
+height: 25px;
+background: #4a3728;
+margin-top: -5px;
+border-radius: 4px;
+}
+
+.ornament {
+position: absolute;
+font-size: 0.9rem;
+animation: swing 3s ease-in-out infinite;
+}
+.ornament-1 { left: 15px; top: 35px; animation-delay: 0s; }
+.ornament-2 { left: 45px; top: 50px; animation-delay: 0.5s; }
+.ornament-3 { left: 25px; top: 65px; animation-delay: 1s; }
+.ornament-4 { left: 55px; top: 75px; animation-delay: 1.5s; }
+.ornament-5 { left: 35px; top: 90px; animation-delay: 2s; }
+
+@keyframes twinkleStar {
+0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+50% { opacity: 0.7; transform: scale(1.2) rotate(180deg); }
+}
+
+@keyframes swing {
+0%, 100% { transform: translateX(0) rotate(0deg); }
+25% { transform: translateX(-3px) rotate(-5deg); }
+75% { transform: translateX(3px) rotate(5deg); }
+}
+.santa-bag {
+position: fixed;
+top: 2rem;
+right: 2rem;
+z-index: 100;
+cursor: pointer;
+}
+
+.bag-icon {
+width: 70px;
+height: 70px;
+background: linear-gradient(135deg, #c62828 0%, #d32f2f 50%, #b71c1c 100%);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 2.5rem;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 0 3px rgba(255,255,255,0.1);
+transition: all 400ms cubic-bezier(.2,.9,.2,1);
+position: relative;
+animation: bagBounce 3s ease-in-out infinite;
+}
+
+.santa-bag:hover .bag-icon {
+transform: scale(1.15) rotate(-10deg);
+box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 0 5px rgba(255,209,194,0.3), 0 0 50px rgba(255,100,100,0.5);
+}
+
+.bag-glow {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 100px;
+height: 100px;
+background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
+border-radius: 50%;
+animation: glowPulse 2s ease-in-out infinite;
+pointer-events: none;
+}
+
+@keyframes bagBounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+
+@keyframes glowPulse {
+0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+}
+.santa-popup {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
+backdrop-filter: blur(10px);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.3s ease;
+}
+
+.santa-popup.active {
+opacity: 1;
+pointer-events: all;
+}
+
+.popup-content {
+background: linear-gradient(135deg, #b71c1c 0%, #d32f2f 50%, #e91e63 100%);
+border-radius: 24px;
+padding: 3rem 2.5rem;
+max-width: 450px;
+width: 90%;
+box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 3px rgba(255,255,255,0.2);
+position: relative;
+text-align: center;
+transform: scale(0.9);
+transition: transform 0.3s cubic-bezier(.2,.9,.2,1);
+}
+
+.santa-popup.active .popup-content {
+transform: scale(1);
+animation: popupBounce 0.6s cubic-bezier(.2,.9,.2,1);
+}
+
+@keyframes popupBounce {
+0% { transform: scale(0.8); }
+50% { transform: scale(1.05); }
+100% { transform: scale(1); }
+}
+
+.popup-close {
+position: absolute;
+top: 1rem;
+right: 1rem;
+width: 35px;
+height: 35px;
+background: rgba(0,0,0,0.3);
+border: 2px solid rgba(255,255,255,0.3);
+border-radius: 50%;
+color: #fff;
+font-size: 1.2rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.2s ease;
+}
+
+.popup-close:hover {
+background: rgba(0,0,0,0.5);
+transform: rotate(90deg);
+border-color: rgba(255,255,255,0.5);
+}
+
+.santa-avatar {
+font-size: 4.5rem;
+margin-bottom: 1rem;
+animation: santaWave 1s ease-in-out infinite;
+}
+
+@keyframes santaWave {
+0%, 100% { transform: rotate(-5deg); }
+50% { transform: rotate(5deg); }
+}
+
+.popup-content h3 {
+font-family: "Great Vibes", cursive;
+font-size: 2.5rem;
+margin: 0 0 1rem 0;
+color: #fff;
+text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.santa-message {
+font-size: 1.3rem;
+font-weight: 700;
+margin: 0 0 1rem 0;
+color: #fff;
+text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.santa-submessage {
+font-size: 1rem;
+color: rgba(255,255,255,0.9);
+line-height: 1.6;
+margin: 0 0 1.5rem 0;
+}
+
+.popup-decoration {
+display: flex;
+gap: 1rem;
+justify-content: center;
+font-size: 2rem;
+}
+
+.popup-decoration span {
+animation: decorationBounce 1s ease-in-out infinite;
+}
+
+.popup-decoration span:nth-child(1) { animation-delay: 0s; }
+.popup-decoration span:nth-child(2) { animation-delay: 0.2s; }
+.popup-decoration span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes decorationBounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+.roadmap-section {
+background: linear-gradient(180deg, #071423 0%, #0f2b47 50%, #071423 100%);
+color: #fff;
+padding: 5rem 1.5rem;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.roadmap-section::before {
+content: '';
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 120%;
+height: 100%;
+background: radial-gradient(ellipse at center, rgba(255,200,170,0.03), transparent 70%);
+pointer-events: none;
+}
+
+.roadmap-section h2 {
+font-family: "Great Vibes", cursive;
+font-size: clamp(2.5rem, 7vw, 3.5rem);
+color: #ffd1c2;
+margin-bottom: 0.5rem;
+text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+position: relative;
+z-index: 2;
+}
+
+.roadmap-subtitle {
+font-size: clamp(1rem, 2vw, 1.2rem);
+color: rgba(255,255,255,0.7);
+margin-bottom: 3rem;
+position: relative;
+z-index: 2;
+}
+
+.roadmap {
+position: relative;
+max-width: 800px;
+margin: 0 auto;
+padding: 2rem 0;
+}
+
+.roadmap-line {
+position: absolute;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+width: 4px;
+height: 100%;
+background: linear-gradient(180deg, 
+    transparent 0%,
+    rgba(255,209,194,0.3) 10%,
+    rgba(255,209,194,0.6) 50%,
+    rgba(255,209,194,0.3) 90%,
+    transparent 100%
+);
+border-radius: 2px;
+}
+
+.roadmap-line::before {
+content: '';
+position: absolute;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+width: 12px;
+height: 12px;
+background: #ffd1c2;
+border-radius: 50%;
+box-shadow: 0 0 20px rgba(255,209,194,0.6);
+animation: slideDown 3s ease-out infinite;
+}
+
+@keyframes slideDown {
+0% { top: 0; opacity: 1; }
+90% { opacity: 1; }
+100% { top: 100%; opacity: 0; }
+}
+
+.milestone {
+position: relative;
+display: flex;
+align-items: center;
+margin: 3rem 0;
+opacity: 0;
+animation: fadeInMilestone 0.6s ease forwards;
+}
+
+.milestone-1 { animation-delay: 0.2s; }
+.milestone-2 { animation-delay: 0.4s; }
+.milestone-3 { animation-delay: 0.6s; }
+.milestone-4 { animation-delay: 0.8s; }
+.milestone-5 { animation-delay: 1s; }
+
+@keyframes fadeInMilestone {
+from { opacity: 0; transform: translateY(20px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+.milestone-icon {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+width: 70px;
+height: 70px;
+background: linear-gradient(135deg, #b71c1c 0%, #e91e63 100%);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 2rem;
+box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 4px rgba(255,255,255,0.1);
+z-index: 2;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.milestone:hover .milestone-icon {
+transform: translateX(-50%) scale(1.15) rotate(5deg);
+box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 0 6px rgba(255,209,194,0.3), 0 0 40px rgba(255,100,100,0.4);
+}
+
+.milestone-content {
+flex: 1;
+background: rgba(255,255,255,0.06);
+padding: 1.5rem 2rem;
+border-radius: 16px;
+border: 1px solid rgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+transition: all 0.3s ease;
+text-align: left;
+}
+
+.milestone:nth-child(odd) .milestone-content {
+margin-right: calc(50% + 50px);
+}
+
+.milestone:nth-child(even) .milestone-content {
+margin-left: calc(50% + 50px);
+}
+
+.milestone-content:hover {
+background: rgba(255,255,255,0.1);
+border-color: rgba(255,209,194,0.3);
+transform: translateY(-5px);
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.milestone-content h3 {
+margin: 0 0 0.5rem 0;
+font-size: 1.4rem;
+color: #ffefcf;
+font-weight: 700;
+}
+
+.milestone-content p {
+margin: 0;
+color: rgba(255,255,255,0.85);
+line-height: 1.6;
+font-size: 0.95rem;
+}
+
+.milestone-content strong {
+color: #ffd1c2;
+font-weight: 600;
+}
+
+@media (max-width: 768px) {
+.roadmap-section { padding: 3rem 1rem; }
+.roadmap { padding: 1rem 0; }
+.roadmap-line { left: 30px; }
+.roadmap-line::before { width: 10px; height: 10px; }
+.milestone { flex-direction: column; align-items: flex-start; margin: 2rem 0; }
+.milestone-icon {
+    position: static;
+    transform: none;
+    width: 60px;
+    height: 60px;
+    font-size: 1.7rem;
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+.milestone:hover .milestone-icon {
+    transform: scale(1.15) rotate(5deg);
+}
+.milestone-content {
+    margin: 0 !important;
+    padding: 1.2rem 1.5rem;
+}
+.milestone-content h3 { font-size: 1.2rem; }
+.santa-bag { top: 1rem; right: 1rem; }
+.bag-icon { width: 60px; height: 60px; font-size: 2rem; }
+}
+
+@media (max-width: 600px) {
+.headline h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+.xmas-btn { font-size: 0.95rem; padding: 0.65rem 1.2rem; }
+.xmas-tree { left: 1rem; bottom: 1rem; transform: scale(0.8); }
+.music-player { right: 1rem; bottom: 1rem; }
+.music-btn { width: 50px; height: 50px; }
+.countdown { gap: 0.8rem; }
+.countdown-item { padding: 0.7rem 1rem; min-width: 65px; }
+.countdown-value { font-size: 1.8rem; }
+.popup-content { padding: 2rem 1.5rem; }
+.santa-avatar { font-size: 3.5rem; }
+.popup-content h3 { font-size: 2rem; }
+.santa-message { font-size: 1.1rem; }
 }

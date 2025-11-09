@@ -10,48 +10,151 @@
 <body>
   <div class="stage">
     <img src="https://assets.hackclub.com/flag-orpheus-left.svg" style="width: 100px; position: absolute; top: 5px; left: 0;" alt="Hack Club flag" class="svelte-l9ykx">
+    <div class="santa-bag" id="santaBag">
+      <div class="bag-icon">🎅</div>
+      <div class="bag-glow"></div>
+    </div>
+    <div class="santa-popup" id="santaPopup">
+      <div class="popup-content">
+        <button class="popup-close" id="popupClose">✕</button>
+        <div class="santa-avatar">🎅</div>
+        <h3>Ho Ho Ho!</h3>
+        <p class="santa-message">My magical gift bag is locked right now! 🔒</p>
+        <p class="santa-submessage">Complete the event challenges to unlock amazing rewards from Santa's collection!</p>
+        <div class="popup-decoration">
+          <span>🎁</span>
+          <span>🔔</span>
+          <span>⭐</span>
+        </div>
+      </div>
+    </div>
+    <div class="xmas-tree">
+      <div class="tree-top">⭐</div>
+      <div class="tree-tier tree-tier-1">🎄</div>
+      <div class="tree-tier tree-tier-2">🎄</div>
+      <div class="tree-tier tree-tier-3">🎄</div>
+      <div class="tree-trunk"></div>
+      <div class="ornament ornament-1">🔴</div>
+      <div class="ornament ornament-2">🟡</div>
+      <div class="ornament ornament-3">🔵</div>
+      <div class="ornament ornament-4">🟢</div>
+      <div class="ornament ornament-5">🟣</div>
+    </div>
+    <div class="music-player">
+      <button class="music-btn" id="musicToggle" aria-label="Toggle holiday music">
+        <span class="music-icon">🎵</span>
+      </button>
+    </div>
     <div class="headline" role="heading" aria-level="1">
       <h1>Christmas Ysws</h1>
       <p>Santa wants you to give a Present ✨</p>
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-value" id="days">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="hours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="minutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="seconds">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
     </div>
-
     <button class="xmas-btn" aria-label="Open holiday surprise"  onclick="window.location.href='https://forms.fillout.com/t/egSPo9QhLXus'">RSVP</button>
-
     <div class="glow" aria-hidden="true"></div>
-
     <div class="snow" aria-hidden="true" id="snow"></div>
   </div>
+  <section class="roadmap-section">
+    <h2>🎄 Your Journey to Santa's Gifts</h2>
+    <p class="roadmap-subtitle">Follow these steps to earn your Christmas rewards!</p>
+    <div class="roadmap">
+      <div class="roadmap-line"></div>  
+      <div class="milestone milestone-1">
+        <div class="milestone-icon">📝</div>
+        <div class="milestone-content">
+          <h3>Step 1: RSVP</h3>
+          <p>Click the RSVP button above and fill out the form to register for Christmas YSWS. This is your ticket to participate!</p>
+        </div>
+      </div>
+      <div class="milestone milestone-2">
+        <div class="milestone-icon">💬</div>
+        <div class="milestone-content">
+          <h3>Step 2: Join Slack</h3>
+          <p>Join the <strong>#christmas-ysws</strong> channel in Hack Club Slack. Connect with other participants and get updates!</p>
+        </div>
+      </div>
+
+      <div class="milestone milestone-3">
+        <div class="milestone-icon">🛠️</div>
+        <div class="milestone-content">
+          <h3>Step 3: Build Your Project</h3>
+          <p>Create your own educational tool or project based on the challenge. Teach Santa something amazing using code, hardware, or both!</p>
+        </div>
+      </div>
+      <div class="milestone milestone-4">
+        <div class="milestone-icon">🔔</div>
+        <div class="milestone-content">
+          <h3>Step 4: Earn Jingle Bells</h3>
+          <p>Track your hours with HackaTime (software) or a detailed journal (hardware). Every hour of work earns you Jingle Bells!</p>
+        </div>
+      </div>
+      <div class="milestone milestone-5">
+        <div class="milestone-icon">🎁</div>
+        <div class="milestone-content">
+          <h3>Step 5: Redeem Rewards</h3>
+          <p>Exchange your Jingle Bells for cool mystery items from Santa's bag. The more you build, the more you earn!</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="faq-section">
-  <h2>🎁 Frequently Asked Questions</h2>
-
-  <div class="faq">
-    <details>
-      <summary>How to Track Coding Hours</summary>
-      <p>Any software or IDE can be used which supports HackaTime.</p>
-    </details>
-
-    <details>
-      <summary>How to Track Hours for Hardware</summary>
-      <p>Make a detailed journal with pictures and information about hours spent (more commits, more likely to be accepted).</p>
-    </details>
-
-    <details>
-      <summary>What Will I Be Getting?</summary>
-      <p>An exclusive present from Santa containing different mystery items.</p>
-    </details>
-
-    <details>
-      <summary>What Are the Minimum Hours Required?</summary>
-      <p>3 hours minimum for software, 4 hours minimum for hardware.</p>
-    </details>
-
-    <details>
-      <summary>I Am HackaTime Banned — Can I Still Do Hardware?</summary>
-      <p>No — Santa doesn’t accept banned people.</p>
-    </details>
-  </div>
-</section>
-
+    <h2>🎁 Frequently Asked Questions</h2>
+    <div class="faq">
+      <details>
+        <summary>What is YSWS?</summary>
+        <p><strong>YS (You Spend):</strong> You create your own tool or project to explain any subject (PCB, physics, maths, chemistry, coding, or anything!) to Santa in a creative way.<br><strong>WS (Winter Swap):</strong> Get cool things from Santa's bag in exchange for bells 🔔 based on the hours you spent teaching him!</p>
+      </details>
+      <details>
+        <summary>What is Hack Club?</summary>
+        <p>Hack Club is a global network of high school makers & student-led coding clubs. It's a community where teenagers learn to code, build amazing projects, and share their creations with the world. Join thousands of young creators building the future!</p>
+      </details>
+      <details>
+        <summary>How to Track Coding Hours</summary>
+        <p>Any software or IDE can be used which supports HackaTime.</p>
+      </details>
+      <details>
+        <summary>How to Track Hours for Hardware</summary>
+        <p>Make a detailed journal with pictures and information about hours spent (more commits, more likely to be accepted).</p>
+      </details>
+      <details>
+        <summary>What Will I Be Getting?</summary>
+        <p>An exclusive present from Santa containing different mystery items.</p>
+      </details>
+      <details>
+        <summary>What Are the Minimum Hours Required?</summary>
+        <p>3 hours minimum for software, 4 hours minimum for hardware.</p>
+      </details>
+      <details>
+        <summary>I Am HackaTime Banned — Can I Still Do Hardware?</summary>
+        <p>No — Santa doesn't accept banned people.</p>
+      </details>
+      <details>
+        <summary>What Kind of Teaching Tools Can I Make?</summary>
+        <p>Get creative! Build interactive simulations, games, calculators, visualizations, or any tool that helps explain a concept. Whether it's a circuit board designer, physics simulator, math tutor, or chemistry visualizer — if it teaches something in a fun way, Santa will love it!</p>
+      </details>
+      <details>
+        <summary>When is the Deadline?</summary>
+        <p>Check the countdown timer above! Make sure to submit your RSVP and complete your project before time runs out.</p>
+      </details>
+    </div>
+  </section>
   <script src="script.js"></script>
 </body>
 </html>
